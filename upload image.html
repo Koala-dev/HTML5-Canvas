@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>加载图片代码upload the image code</title>
+</head>
+<body>
+	<canvas id="c" width="200" height="200"></canvas>
+	
+	<script>
+		var c = document.querySelector("#c");
+		var ctx = c.getContext("2d");
+
+		var image = new Image();
+
+		image.onload = function() {
+			console.log("Loaded image");
+			ctx.drawImage(image, 0, 0, c.width, c.height);
+			var savedImage = c.toDataURL();
+			window.open(savedImage);
+		}
+
+		image.src = "GGB.jpg";
+	</script>
+</body>
+</html>

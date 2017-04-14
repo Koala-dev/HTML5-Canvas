@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise</title>
+</head>
+
+<body>
+    <canvas id="c" width="500" height="500"></canvas>
+    <script>
+    var c = document.querySelector("#c");
+    var ctx = c.getContext("2d");
+
+    // 保存蓝色填充的状态
+    ctx.save();
+    ctx.fillStyle = "green";
+    ctx.fillRect(100, 100, 10, 10);
+    // 恢复蓝色填充的状态
+    ctx.restore();
+
+    ctx.fillRect(200, 10, 20, 20);
+    </script>
+</body>
+
+</html>
